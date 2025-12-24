@@ -1,0 +1,8 @@
+= Nickel Config Reporter
+:toc: auto
+
+Configuration reporting and validation using Nickel language.
+
+== License
+
+AGPL-3.0-or-later
