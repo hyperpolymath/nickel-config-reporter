@@ -1,123 +1,67 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 = Nickel Config Reporter
-:toc: preamble
+:toc: macro
+:toc-title: Contents
 :toclevels: 3
 :icons: font
 :source-highlighter: rouge
 
-A configuration reporting and validation utility built with the Nickel configuration language.
-
-== Project Status
-
-[IMPORTANT]
-====
-**Repository Project Specification** — Core implementation will be uploaded shortly.
-
-Currently, only infrastructure scaffolding is in place:
-
-* Multi-platform SCM mirroring (GitHub → GitLab, Codeberg, Bitbucket)
-* Instant-sync propagation workflow
-* Security policies and development guidelines
-====
-
-== Planned Features
-
-* **Configuration Validation** — Validate configs against Nickel contracts
-* **Schema Reporting** — Generate human-readable reports from Nickel schemas
-* **Diff Detection** — Compare configuration versions and report changes
-* **Multi-Format Export** — Output reports in JSON, YAML, TOML, or plain text
-* **CI/CD Integration** — Validate configs in pipelines before deployment
-
-== Technology Stack
-
-Per the link:.claude/CLAUDE.md[Hyperpolymath Language Policy]:
-
-[cols="1,2"]
-|===
-| Component | Technology
-
-| Core Logic
-| Rust (CLI, validation engine)
-
-| Configuration
-| Nickel (.ncl files)
-
-| Scripting/Glue
-| Deno + ReScript (if web UI needed)
-
-| Package Management
-| Guix (primary), Nix (fallback)
-|===
-
-== Repository Infrastructure
-
-=== Multi-Platform Mirroring
-
-This repository automatically mirrors to multiple Git forges:
-
-[source]
-----
-GitHub (primary)
-    ├── GitLab
-    ├── Codeberg
-    └── Bitbucket
-----
-
-Mirroring is controlled via repository variables:
-
-* `GITLAB_MIRROR_ENABLED`
-* `CODEBERG_MIRROR_ENABLED`
-* `BITBUCKET_MIRROR_ENABLED`
-
-=== Instant Sync
-
-On push to `main`/`master` or release publication, the repository triggers propagation to all configured forges via the `.git-private-farm` dispatch mechanism.
-
-== Getting Started
+Configuration reporting and validation utility using the https://nickel-lang.org[Nickel] configuration language.
 
 [NOTE]
 ====
-Build and usage instructions will be added once core implementation is uploaded.
+*Project Status:* Specification phase. Core implementation will be uploaded shortly.
 ====
 
-=== Prerequisites (Planned)
+toc::[]
 
-* Rust toolchain (stable)
-* Nickel CLI
-* Guix or Nix (for reproducible builds)
+== Overview
 
-=== Installation (Planned)
+Nickel Config Reporter is a configuration analysis and reporting tool built with:
 
-[source,bash]
-----
-# Via Guix
-guix install nickel-config-reporter
+* **Nickel** - Programmable configuration language with contracts and gradual typing
+* **Rust** - Core CLI implementation (per Hyperpolymath language policy)
+* **ReScript** - Any web/UI components
 
-# Via Cargo
-cargo install nickel-config-reporter
+=== Planned Capabilities
 
-# From source
-git clone https://github.com/hyperpolymath/nickel-config-reporter.git
-cd nickel-config-reporter
-cargo build --release
-----
+* Parse and validate Nickel configuration files
+* Generate human-readable configuration reports
+* Validate configurations against contracts
+* Export to multiple output formats
+* Integration with CI/CD pipelines
 
-== Documentation
+== Current Repository Contents
 
-* link:ROADMAP.adoc[Roadmap] — Development priorities and milestones
-* link:SECURITY.md[Security Policy] — Vulnerability reporting and security measures
-* link:.claude/CLAUDE.md[Language Policy] — Allowed/banned technologies
+This repository currently provides:
 
-== Contributing
+[cols="1,3"]
+|===
+|Component |Description
 
-Contributions welcome once core implementation is in place.
+|`.github/workflows/`
+|Multi-platform mirroring infrastructure (GitHub, GitLab, Codeberg, Bitbucket)
 
-All contributions must follow:
+|`SECURITY.md`
+|Security policies and vulnerability reporting
 
-1. Hyperpolymath language policy (no TypeScript, Node.js, Go, etc.)
-2. SPDX license headers on all source files
-3. SHA-pinned dependencies
-4. Security-first practices
+|`.claude/CLAUDE.md`
+|Hyperpolymath language policy (ReScript, Rust, Deno, Nickel stack)
+|===
+
+== Multi-Platform Mirroring
+
+This repository is automatically mirrored to:
+
+* https://gitlab.com/hyperpolymath/nickel-config-reporter[GitLab]
+* https://codeberg.org/hyperpolymath/nickel-config-reporter[Codeberg]
+* https://bitbucket.org/hyperpolymath/nickel-config-reporter[Bitbucket]
+
+See link:README.md[README.md] for mirroring setup documentation.
+
+== Roadmap
+
+See link:ROADMAP.adoc[ROADMAP.adoc] for development phases and planned features.
 
 == License
 
