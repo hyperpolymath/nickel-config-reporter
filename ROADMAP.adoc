@@ -1,0 +1,159 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+= Nickel Config Reporter — Roadmap
+:toc: preamble
+:toclevels: 2
+:icons: font
+
+Development roadmap for the Nickel Config Reporter project.
+
+== Current State
+
+[cols="1,3"]
+|===
+| Status | Description
+
+| ✅ Complete
+| Multi-platform SCM mirroring infrastructure
+
+| ✅ Complete
+| Instant-sync forge propagation
+
+| ✅ Complete
+| Security policies and CI/CD hardening
+
+| ✅ Complete
+| Language policy documentation
+
+| ⏳ Pending
+| **Core implementation upload**
+|===
+
+== Phase 1: Foundation
+
+_Priority: Establish core Rust project structure_
+
+=== 1.1 Project Scaffolding
+* [ ] Initialize Cargo workspace
+* [ ] Create `guix.scm` for reproducible builds
+* [ ] Add `flake.nix` as fallback
+* [ ] Set up CI/CD for Rust (cargo fmt, clippy, test)
+
+=== 1.2 Nickel Integration
+* [ ] Add nickel-lang as dependency
+* [ ] Implement Nickel file parsing
+* [ ] Contract validation engine
+* [ ] Error reporting with source locations
+
+=== 1.3 CLI Framework
+* [ ] Command-line argument parsing (clap)
+* [ ] Subcommands: `validate`, `report`, `diff`, `export`
+* [ ] Configuration file support (`.nickel-reporter.ncl`)
+
+== Phase 2: Core Features
+
+_Priority: Implement primary reporting functionality_
+
+=== 2.1 Validation Engine
+* [ ] Schema contract validation
+* [ ] Custom contract support
+* [ ] Detailed error messages
+* [ ] Warning levels (error, warn, info)
+
+=== 2.2 Report Generation
+* [ ] Human-readable text reports
+* [ ] Structured output (JSON, YAML)
+* [ ] Schema documentation extraction
+* [ ] Field-level annotations
+
+=== 2.3 Configuration Diffing
+* [ ] Semantic diff between configs
+* [ ] Change categorization (added, removed, modified)
+* [ ] Breaking change detection
+* [ ] Migration path suggestions
+
+== Phase 3: Integrations
+
+_Priority: CI/CD and tooling ecosystem_
+
+=== 3.1 CI/CD Plugins
+* [ ] GitHub Actions action
+* [ ] GitLab CI template
+* [ ] Pre-commit hook
+* [ ] Exit codes for pipeline integration
+
+=== 3.2 Editor Support
+* [ ] LSP integration considerations
+* [ ] Error format for IDE consumption
+* [ ] Watch mode for development
+
+=== 3.3 Export Formats
+* [ ] JSON output
+* [ ] YAML output
+* [ ] TOML output
+* [ ] Markdown documentation
+* [ ] HTML reports
+
+== Phase 4: Advanced Features
+
+_Priority: Enhanced capabilities_
+
+=== 4.1 Multi-Config Support
+* [ ] Directory scanning
+* [ ] Glob pattern matching
+* [ ] Recursive validation
+* [ ] Aggregated reporting
+
+=== 4.2 Schema Registry
+* [ ] Remote schema fetching
+* [ ] Schema versioning
+* [ ] Caching layer
+* [ ] Integrity verification (SHA-256)
+
+=== 4.3 Performance
+* [ ] Parallel validation
+* [ ] Incremental checking
+* [ ] Large file handling
+* [ ] Memory optimization
+
+== Future Considerations
+
+These items are under consideration but not yet planned:
+
+* **Web UI** — ReScript + Deno for browser-based validation
+* **API Server** — REST/gRPC service for validation-as-a-service
+* **Plugin System** — Custom validators and reporters
+* **Nix Integration** — Generate Nix expressions from Nickel
+* **Guix Integration** — Generate Guix package definitions
+
+== Non-Goals
+
+The following are explicitly out of scope:
+
+* TypeScript/Node.js implementation
+* Python tooling (except SaltStack integration if needed)
+* Proprietary platform integrations
+* Features requiring non-FOSS dependencies
+
+== Contributing to the Roadmap
+
+To propose changes to this roadmap:
+
+1. Open an issue describing the feature
+2. Explain the use case and benefits
+3. Indicate where it fits in the phase structure
+4. Ensure alignment with the language policy
+
+== Version History
+
+[cols="1,1,3"]
+|===
+| Version | Date | Changes
+
+| 0.1.0
+| TBD
+| Initial release with core validation
+
+| —
+| 2024
+| Infrastructure scaffolding complete
+|===
