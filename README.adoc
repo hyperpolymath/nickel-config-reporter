@@ -1,7 +1,67 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
 = Nickel Config Reporter
-:toc: auto
+:toc: macro
+:toc-title: Contents
+:toclevels: 3
+:icons: font
+:source-highlighter: rouge
 
-Configuration reporting and validation using Nickel language.
+Configuration reporting and validation utility using the https://nickel-lang.org[Nickel] configuration language.
+
+[NOTE]
+====
+*Project Status:* Specification phase. Core implementation will be uploaded shortly.
+====
+
+toc::[]
+
+== Overview
+
+Nickel Config Reporter is a configuration analysis and reporting tool built with:
+
+* **Nickel** - Programmable configuration language with contracts and gradual typing
+* **Rust** - Core CLI implementation (per Hyperpolymath language policy)
+* **ReScript** - Any web/UI components
+
+=== Planned Capabilities
+
+* Parse and validate Nickel configuration files
+* Generate human-readable configuration reports
+* Validate configurations against contracts
+* Export to multiple output formats
+* Integration with CI/CD pipelines
+
+== Current Repository Contents
+
+This repository currently provides:
+
+[cols="1,3"]
+|===
+|Component |Description
+
+|`.github/workflows/`
+|Multi-platform mirroring infrastructure (GitHub, GitLab, Codeberg, Bitbucket)
+
+|`SECURITY.md`
+|Security policies and vulnerability reporting
+
+|`.claude/CLAUDE.md`
+|Hyperpolymath language policy (ReScript, Rust, Deno, Nickel stack)
+|===
+
+== Multi-Platform Mirroring
+
+This repository is automatically mirrored to:
+
+* https://gitlab.com/hyperpolymath/nickel-config-reporter[GitLab]
+* https://codeberg.org/hyperpolymath/nickel-config-reporter[Codeberg]
+* https://bitbucket.org/hyperpolymath/nickel-config-reporter[Bitbucket]
+
+See link:README.md[README.md] for mirroring setup documentation.
+
+== Roadmap
+
+See link:ROADMAP.adoc[ROADMAP.adoc] for development phases and planned features.
 
 == License
 
