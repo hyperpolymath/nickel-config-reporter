@@ -71,7 +71,7 @@ See [SECURITY.md](SECURITY.md) for security policies and best practices.
 
 ## Roadmap
 
-See [ROADMAP.md](ROADMAP.md) for planned features and development priorities.
+See [ROADMAP.adoc](ROADMAP.adoc) for planned features and development priorities.
 
 ## License
 
