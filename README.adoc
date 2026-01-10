@@ -1,9 +1,12 @@
-image:https://img.shields.io/badge/License-MPL_2.0-blue.svg[MPL-2.0,link="https://opensource.org/licenses/MPL-2.0"]
+image:https://img.shields.io/badge/license-PMPL--1.0-blue.svg[License,link="https://github.com/hyperpolymath/palimpsest-license"]
 image:https://img.shields.io/badge/Philosophy-Palimpsest-purple.svg[Palimpsest,link="https://github.com/hyperpolymath/palimpsest-licence"]
 
 
-// SPDX-License-Identifier: AGPL-3.0-or-later
+// SPDX-License-Identifier: PMPL-1.0
 = Nickel Config Reporter
+
+
+
 
 :toc: macro
 :toc-title: Contents
@@ -70,6 +73,6 @@ See link:ROADMAP.adoc[ROADMAP.adoc] for development phases and planned features.
 
 == License
 
-AGPL-3.0-or-later
+PMPL-1.0-or-later
 
 This project is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
