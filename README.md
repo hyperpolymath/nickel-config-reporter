@@ -1,4 +1,7 @@
 # nickel-config-reporter
+[![License](https://img.shields.io/badge/license-PMPL--1.0-blue.svg)](https://github.com/hyperpolymath/palimpsest-license)
+
+
 
 A configuration reporter utility with multi-platform SCM mirroring infrastructure.
 
